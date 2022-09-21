@@ -1,0 +1,15 @@
+<!-- <div [ngClass]="{'msg':true,'self':sides,'other':!sides}">
+  <div class="child-container">
+  <div class="name">{{name}}</div>
+  <div class="message">{{message}}</div>
+  <div class="time">{{currdate}}</div>
+</div>
+  </div> -->
+
+
+
+  <div [ngClass]="{'self':sides, 'other': !sides}">
+    <div *ngIf= "!sides" class="user-name">{{name}}</div>
+    <div class="message">{{message}}</div>
+    <div class="time">{{currdate}}</div>
+  </div>
