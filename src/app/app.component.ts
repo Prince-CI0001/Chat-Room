@@ -13,11 +13,11 @@ export class AppComponent {
     this.createComponent();
   }
   createComponent(){
+
     let value = (<HTMLInputElement>document.getElementById("user")).value;
     if(value=="")
     alert("Enter user");
-    else if(this.Array.includes(value))
-    alert("User Exist");
+    
     else
     this.Array.push(value);
     this.name="";
