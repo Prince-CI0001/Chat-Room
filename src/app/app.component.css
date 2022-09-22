@@ -3,7 +3,6 @@ html,body{
   padding: 0;
   height: 100%;
 }
-
 .container{
   display: flex;
   flex-direction: column;
@@ -25,6 +24,6 @@ main{
   justify-content:space-around;
   flex-wrap: wrap;
 }
-ng-container{
+/* ng-container{
   margin: 5%;
-}
+} */

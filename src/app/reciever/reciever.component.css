@@ -1,7 +1,6 @@
 .html,body{
   margin: 0;
   padding: 0;
-
 }
 body{
   height: 100%;
@@ -20,21 +19,21 @@ header{
   display: flex;
   margin-top: 5%;
   height: 10%;
-  /* border: 1px solid red; */
 }
-main{
-  height: 60%;
-  margin: 1% 0;
+.screen{
+ height: 60%;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow-y:scroll;
+}
+.chat{
+  margin: 1% 0;
 }
 footer{
   display: flex;
   height: 10%;
   margin-top: 10%;
-  /* border: 1px solid blue; */
 }
 .msg{
   width: 80%;

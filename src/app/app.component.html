@@ -1,14 +1,14 @@
-
 <div class="container">
 <div class="header">
   <h1>CHAT ROOM</h1>
   <div>
-    <input type="text" value="USER" [(ngModel)] = "name"/>
+    <input type="text" value="USER" [(ngModel)] = "name" id="user" placeholder="User" (keydown)= "msg($event)"/>
     <button (click)="createComponent()">JOIN</button>
   </div>
-
 </div>
-<main>
-  <ng-container #container></ng-container>
+<main >
+  <div *ngFor="let name of Array">
+    <app-reciever [userName]="name"></app-reciever>
+  </div>
 </main>
 </div>

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { RecieverComponent } from '../reciever/reciever.component';
-import { chatMessage } from '../chatMessage.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { messageType } from '../reciever/message.Interface';
 
 @Component({
-  selector: 'app-message',
+  selector: 'app-message[msgTemplate]',
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.css']
 })
-export class MessageComponent{
-name:string="";
-message:string="";
-currdate:string="";
-sides : boolean = false;
+export class MessageComponent {
+  @Input() username!: string;
+  @Input() msgTemplate!: messageType;
+  sides!: boolean;
+  ngOnInit() {
+    this.sides = (this.msgTemplate.Name === this.username);
+  }
 }

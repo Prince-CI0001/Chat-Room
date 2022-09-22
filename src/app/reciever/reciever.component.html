@@ -1,14 +1,18 @@
-<div class="container">
+<div class="container" *ngIf="isCancel">
+
   <header>
     <div class="user">{{userName}}</div>
     <button class="cross" (click)="deleteComponent()">X</button>
   </header>
-  <main class="chat">
-    <!-- <app-message></app-message> -->
-    <ng-container #container></ng-container>
-  </main>
+
+  <div class="screen">
+   <div class="chat" *ngFor="let obj of msgArray">
+    <app-message [msgTemplate]="obj" [username]="userName"></app-message>
+  </div>
+</div>
+
   <footer>
-    <input type="text" class="msg" id="msg" [(ngModel)]="newMessage" placeholder="Enter your Message">
+    <input type="text" class="msg" id="msg" [(ngModel)]="newMessage" placeholder="Enter your Message" (keydown)="callForMessage($event)">
     <button class="send" (click)="sendmessage()">SEND</button>
   </footer>
 
